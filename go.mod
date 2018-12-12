@@ -1,4 +1,4 @@
-module github.com/fullstorydev/grpcurl
+module github.com/panzerdev/grpcurl
 
 require (
 	github.com/golang/protobuf v1.1.0
