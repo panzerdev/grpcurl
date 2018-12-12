@@ -575,7 +575,7 @@ func BlockingDial(ctx context.Context, network, address string, creds credential
 		ctx, cancel := context.WithTimeout(ctx, timeout)
 		defer cancel()
 
-		conn, err := (&net.Dialer{Cancel: ctx.Done()}).Dial(network, address)
+		conn, err := net.DialTimeout(network, address, timeout)
 		if err != nil {
 			writeResult(err)
 			return nil, err
